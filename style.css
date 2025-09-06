@@ -1,0 +1,86 @@
+/* General Page Styling */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #e9fbcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Page Containers */
+.page {
+  display: none;
+  background: rgb(253, 251, 251);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  width: 320px;
+  text-align: center;
+}
+.page.active {
+  display: block;
+  animation: fadeIn 0.4s ease-in;
+}
+
+/* Inputs and Buttons */
+input, button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+}
+button {
+  background: #0977ee;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #0056b3;
+}
+.error {
+  color: rgb(255, 0, 98);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* To-Do List */
+.todo-input {
+  display: flex;
+  gap: 10px;
+}
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+#taskList li {
+  background: #9fc35e;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in;
+}
+#taskList button {
+  background: rgb(26, 195, 127);
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#taskList button:hover {
+  background: rgb(195, 103, 103);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
